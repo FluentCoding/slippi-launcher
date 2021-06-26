@@ -2,10 +2,12 @@ import CastOutlinedIcon from "@material-ui/icons/CastOutlined";
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import LiveTvOutlinedIcon from "@material-ui/icons/LiveTvOutlined";
 import SlowMotionVideoIcon from "@material-ui/icons/SlowMotionVideo";
+import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
 import React from "react";
 import { Redirect, Route, Switch, useRouteMatch } from "react-router-dom";
 
 import { PrivateRoute } from "@/components/PrivateRoute";
+import { CharacterLab } from "@/containers/CharacterLab";
 import { Console } from "@/containers/Console";
 import { Header } from "@/containers/Header";
 import { LoginDialog } from "@/containers/Header/LoginDialog";
@@ -48,6 +50,12 @@ const menuItems: MainMenuItem[] = [
     title: "Console Mirror",
     component: <Console />,
     icon: <CastOutlinedIcon />,
+  },
+  {
+    subpath: "characters",
+    title: "Character Lab",
+    component: <CharacterLab />,
+    icon: <SupervisedUserCircleIcon />,
   },
 ];
 

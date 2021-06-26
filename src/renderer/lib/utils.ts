@@ -26,6 +26,16 @@ export const getCharacterIcon = (characterId: number | null, characterColor: num
   return getStatic(`/images/unknown.png`);
 };
 
+export const getCharacterCssIcon = (characterId: number | null): string => {
+  if (characterId !== null) {
+    const characterInfo = charUtils.getCharacterInfo(characterId);
+    if (characterInfo.id !== charUtils.UnknownCharacter.id) {
+      return getStatic(`/images/characters/${characterId}/icon/icon.png`);
+    }
+  }
+  return getStatic(`/images/unknown.png`);
+};
+
 export const getStageImage = (stageId: number): string => {
   return getStatic(`/images/stages/${stageId}.png`);
 };
