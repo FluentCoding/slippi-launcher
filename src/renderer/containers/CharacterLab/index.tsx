@@ -134,7 +134,6 @@ export interface SelectableCharacterProps {
 
 export const CharacterLab: React.FC = () => {
   const [character, setCharacter] = React.useState<Character | undefined>(undefined);
-  const [searchText, setSearchText] = React.useState("");
 
   const SelectableCharacter: React.FC<SelectableCharacterProps> = (props) => {
     return (
